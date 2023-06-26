@@ -3,7 +3,6 @@ const app = express();
 const fs = require("fs");
 const expressSession = require("express-session");
 const port = 8000;
-require('dotenv').config()
 
 // creating 31 days * 365 from milliseconds
 const about1year = 365 * 31 * 1000 * 60 * 60 * 24;
