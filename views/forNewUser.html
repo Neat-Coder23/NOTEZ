@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="views/index.css" />
+    <title>Notez!</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="login" class="init-content">
+      <form class="form" id="l-form">
+        <h2 class="topic">Log In</h2>
+        <input
+          type="text"
+          id="l-username"
+          name="username"
+          placeholder="Enter username"
+        />
+        <input
+          type="password"
+          id="l-password"
+          name="password"
+          placeholder="Enter password"
+        />
+        <input type="submit" value="Submit" class="submit" />
+        <label id="switch-l"><u>Sign Up</u></label>
+      </form>
+    </div>
+    <div id="signup" class="init-content">
+      <form class="form" id="s-form">
+        <h2 class="topic">Sign Up</h2>
+        <input
+          type="text"
+          id="s-username"
+          name="username"
+          placeholder="Enter username"
+        />
+        <input
+          type="password"
+          id="s-password"
+          name="password"
+          placeholder="Enter password"
+        />
+        <input type="submit" value="Submit" class="submit" />
+        <label id="switch-s"><u>Log In</u></label>
+      </form>
+    </div>
+    <script src="views/index.js">
+    </script>
+  </body>
+</html>
