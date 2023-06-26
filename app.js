@@ -189,6 +189,6 @@ app.get("/about", (req, res) => {
   res.sendFile('views/about.html',{root:__dirname});
 });
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log("Server listening at http://%s:%s", "localhost", port);
 });
