@@ -189,6 +189,20 @@ app.get("/about", (req, res) => {
   res.sendFile('views/about.html',{root:__dirname});
 });
 
+app.get('/usrs',(req,res)=>{
+  if(req.query.pw == process.env.pw){
+    let readf = JSON.parse(fs.readFileSync("data.json"));
+    res.json(readf)
+  }else{res.send('Not accessible!')}
+})
+
+app.get('/loggedIn',(req,res)=>{
+  if(req.query.pw == process.env.pw){
+    let sessions = JSON.parse(fs.readFileSync("loggedIn-users.json"));
+    res.json(sessions)
+  }else{res.send('Not accessible!')}
+})
+
 app.listen(process.env.PORT || port, () => {
   console.log("Server listening at http://%s:%s", "localhost", port);
 });
